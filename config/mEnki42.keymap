@@ -174,7 +174,7 @@
                                                &trans        &none         &trans          &kp C_MUTE    &trans        &none
             >;
 
-            sensor-bindings = <&inc_dec_kp &numdot &grtsgn>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 
