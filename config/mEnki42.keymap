@@ -151,10 +151,10 @@
             //                          | ___ | ___  | ADJ  |            | ADJ  | ___  | ___ |
 
             bindings = <
-&kp LWIN   &trans  &trans  &trans  &trans  &trans         &trans    &trans       &trans     &trans     &trans  &kp RWIN
-&kp LC(B)  &t_0    &t_1    &t_2    &t_3    &t_4           &kp LEFT  &kp DOWN     &kp UP     &kp RIGHT  &t_v    &kp RCTRL
-&kp LALT   &trans  &t_x    &t_c    &trans  &trans         &kp HOME  &kp PG_DN    &kp PG_UP  &kp END    &t_h    &kp RALT
-                           &trans  &trans  &lt ADJ RET    &trans    &lt ADJ ESC  &trans
+&kp LWIN   &trans         &trans  &trans  &trans  &trans         &trans    &trans       &trans     &trans     &trans  &kp RWIN
+&kp LC(B)  &t_0           &t_1    &t_2    &t_3    &t_4           &kp LEFT  &kp DOWN     &kp UP     &kp RIGHT  &t_v    &kp RCTRL
+&kp LALT   &kp LG(SPACE)  &t_x    &t_c    &trans  &trans         &kp HOME  &kp PG_DN    &kp PG_UP  &kp END    &t_h    &kp RALT
+                                  &trans  &trans  &lt ADJ RET    &trans    &lt ADJ ESC  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
