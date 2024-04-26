@@ -19,30 +19,88 @@
 &mt { quick_tap_ms = <220>; };
 
 / {
-    macros {
-        numdot: numdot {
-            label = "ZM_numdot";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings
-                = <&macro_press   &kp LALT>    
-                , <&macro_tap     &kp KP_N4 &kp KP_N6>    
-                , <&macro_release &kp LALT>
-                ;
+ behaviors {
+        ht: ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <220>;
+            flavor = "tap-preferred";
         };
-        grtsgn: grtsgn {
-            label = "ZM_grtsgn";
+    };
+
+    macros {
+        t_0: t_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings
-                = <&macro_press   &kp LALT>    
-                , <&macro_tap     &kp KP_N6 &kp KP_N2>    
-                , <&macro_release &kp LALT>
-                ;
+            bindings = <&kp LC(B) &kp N0>;
+            label = "T_1";
+        };
+
+        t_1: t_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N1>;
+            label = "T_2";
+        };
+
+        t_2: t_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N2>;
+            label = "T_3";
+        };
+
+        t_3: t_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N3>;
+            label = "T_4";
+        };
+
+        t_4: t_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N4>;
+            label = "T_5";
+        };
+
+        t_c: t_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp C>;
+            label = "T_C";
+        };
+
+        t_x: t_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp X &kp Y>;
+            label = "T_X";
+        };
+
+        t_d: t_d {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp D>;
+            label = "T_D";
+        };
+
+        t_v: t_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp PERCENT>;
+            label = "T_V";
+        };
+
+        t_h: t_hh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp DOUBLE_QUOTES>;
+            label = "T_HH";
         };
     };
 };
